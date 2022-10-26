@@ -1,0 +1,81 @@
+/*  1-Desenvolva um algoritmo/programa que Calcule a 
+Soma de dois números fornecidos pelo usuário.
+Entrada | Saída
+3 9     | 12
+*/
+
+int a = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
+int soma = a + b;
+
+Console.WriteLine(soma);
+
+//##########//
+
+/* Elabore um programa no qual o usuário forneça dois valores inteiros como a base e altura de
+um triângulo, e em seguida o programa calculará a Área desse Triângulo e mostrará esse
+resultado na tela: 
+Area= Base . Altura
+     --------------
+           2
+Obs.: Programadores na linguagem C precisam ter atenção especial à divisão de inteiros
+Entrada     Saída
+4 7 Area.: 14
+3 7 Area.: 10.5
+*/
+
+string [] area1 = Console.ReadLine().Split(' ');
+double a1=double.Parse(area1[0]);
+double a2=double.Parse(area1[1]);
+
+string [] area2= Console.ReadLine().Split(' ');
+double b1=double.Parse(area2[0]);
+double b2=double.Parse(area2[1]);
+
+double calc1 = a1*a2/2.0;
+double calc2 = b1*b2/2.0;
+
+Console.WriteLine("Área.: "+calc1);
+Console.WriteLine("Área.: "+calc2);
+
+//##########//
+
+/* 
+3. Calcular e mostrar o volume de uma caixa: Volume= Altura x Largura x Profundidade
+Entrada        Saída
+Altura.......: 3
+Largura......: 5
+Profundidade.: 7
+Volume.......: 105
+
+*/
+
+int altura=int.Parse(Console.ReadLine());
+int largura=int.Parse(Console.ReadLine());
+int profundidade=int.Parse(Console.ReadLine());
+
+int volume=altura*largura*profundidade;
+Console.WriteLine("Volume: "+volume);
+
+//##########//
+
+/* 
+4. Elabore um algoritmo/programa que calcule a área de uma circunferência, a partir do valor
+do raio que o usuário fornecerá:
+
+Area=π.r² Considere PI = 3.141592
+
+Entrada   Saída
+3         Area.: 28.274328
+*/
+
+int raio=int.Parse(Console.ReadLine());
+
+double area=3.141592*Math.Pow(raio,2);
+Console.WriteLine("Área.: "+area);
+
+//##########//
+
+
+
+
