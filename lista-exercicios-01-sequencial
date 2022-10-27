@@ -77,5 +77,177 @@ Console.WriteLine("Área.: "+area);
 //##########//
 
 
+/* 
+5. O restaurante Bem Bom fornece comida em Kg e bebidas aos seus clientes. Faça um
+algoritmo/programa que leia o valor da bebida escolhida e o peso do prato em Kg. Sendo $
+28,50 o valor cobrado por Kg, calcule e mostre o valor final a ser cobrado do cliente.
+Imprima o valor a pagar apenas com 2 casas decimais.
+Entrada               Saída
+Peso...: 0.470        Valor.: 15.89
+Bebida.: 2.50
+
+*/
+
+double prato = double.Parse(Console.ReadLine());
+double bebida = double.Parse(Console.ReadLine());
+double valor = 28.50*prato + bebida;
+
+Console.WriteLine("Valor.: "+ valor.ToString("F2"));
+
+//##########//
 
 
+/* 
+        6. Faça um algoritmo/programa que leia o diâmetro de uma bola de futebol. Em seguida o
+        programa deve calcular o volume desta bola, cuja fórmula é 
+        Vol= 4.π.r³
+           --------- 
+               3
+        sendo pi=3,141592 e 'r' é o raio da esfera. 
+        Lembre-se que o raio é a metade do diâmetro.
+
+        Entrada      Saída
+        10           Volume.: 523.598666667
+        20           Volume.: 4188.789333333
+
+        */
+
+        double diametro1 = double.Parse(Console.ReadLine());
+        double diametro2 = double.Parse(Console.ReadLine());
+
+        double raio1 = diametro1 / 2.0;
+        double calc1 = ((4 * 3.141592) * (Math.Pow(raio1, 3))) / 3;
+
+        double raio2 = diametro2 / 2.0;
+        double calc2 = ((4 * 3.141592) * (Math.Pow(raio2, 3))) / 3;
+
+        Console.WriteLine("Volume.: " + calc1);
+        Console.WriteLine("Volume.: " + calc2);
+        //##########//
+        
+        
+/* 
+7. Construa um algoritmo/programa que calcule a Soma, a Diferença, o Produto, o Quociente
+Inteiro, o Quociente Fracionário e o Resto da divisão, a partir de dois números inteiros
+fornecidos pelo usuário.
+→ Para o operador do resto da divisão funcionar, seus argumentos precisam ser inteiros,
+portanto as variáveis de entrada precisam ser int (Linguagem C)
+→ Para a variável onde será armazenado o quociente fracionário use o tipo float ou double
+(Linguagem C)
+Entrada        Saída
+5              Soma...........: 8
+3              Diferença......: 2
+               Produto........: 15
+               Quociente Int..: 1
+               Quociente Frac.: 1.666667
+               Resto..........: 2            
+*/
+
+int a = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
+
+int soma = a + b;
+int sub = a - b;
+int prod = a * b;
+int quoInt = a / b;
+double quoFrac = (double)a / b;
+int resto = a % b;
+
+Console.WriteLine("Soma.: " + soma);
+Console.WriteLine("Diferença.: " + sub);
+Console.WriteLine("Produto.: " + prod);
+Console.WriteLine("Quociente Int.: " + quoInt);
+Console.WriteLine("Quociente Frac.: " + quoFrac);
+Console.WriteLine("Resto.: " + resto);
+
+
+//##########//
+
+/* 
+8. Calcular e mostrar a partir da medida do lado de um cubo:
+- a área de uma de suas faces
+- a área total de suas faces
+- o perímetro de uma de suas faces
+- a soma da medida de todas as arestas
+- o seu volume
+Entrada                   Saída
+Lado do Cubo.: 7          Área de uma face......: 49
+                          Área de todas faces...: 294
+                          Perímetro de uma face.: 28
+                          Soma todas arestas....: 84
+                          Volume................: 343
+            
+*/
+
+
+
+int lado = int.Parse(Console.ReadLine());
+double area = Math.Pow(lado, 2);
+double areaTotal = 6 * Math.Pow(lado, 2);
+double perimetro = 4*lado;
+double somaArestas = 12 * lado;
+double volume = Math.Pow(lado, 3);
+
+
+Console.WriteLine("Área de uma face.: " + area);
+Console.WriteLine("Área de todas faces.: " + areaTotal);
+Console.WriteLine("Perímetro de uma face.: " + perimetro);
+Console.WriteLine("Soma todas arestas.: " + somaArestas);
+Console.WriteLine("Volume.: " + volume);
+
+
+//##########//
+
+/* 
+9. Desenvolva um algoritmo que calcule e mostre a média aritmética de 3 notas:
+Ma= x1+x2+x3+...+xn
+    ---------------
+          n
+
+Ma: Média Aritmética
+x1, x2, ..., xn: Cada valor
+n: Quantidade de valores
+
+Entrada          Saída
+Nota 1.: 5       Média....: 6.66
+Nota 2.: 8
+Nota 3.: 7
+
+            
+*/
+
+int nota1 = int.Parse(Console.ReadLine());
+int nota2 = int.Parse(Console.ReadLine());
+int nota3 = int.Parse(Console.ReadLine());
+
+double media = (nota1 + nota2 + nota3) / 3.0;
+
+Console.WriteLine("Média.: " + media.ToString("F2"));
+
+
+//##########//
+
+/* 
+10. Dados dois valores A e B, determine:
+- o quadrado da soma destes números
+- a soma dos quadrados de cada número
+Entrada Saída
+A.: 3
+B.: 5
+Quadrado da Soma...: 64
+Soma dos Quadrados.: 34
+
+            
+*/
+
+int a = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
+
+
+double soma = (a + b) * (a + b);
+double quadrado = Math.Pow(a,2)+Math.Pow(b,2) ;
+
+Console.WriteLine("Quadrado da Soma.: " + soma);
+Console.WriteLine("Soma dos Quadrados.: " + quadrado);
+
+//##########//
