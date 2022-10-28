@@ -251,3 +251,161 @@ Console.WriteLine("Quadrado da Soma.: " + soma);
 Console.WriteLine("Soma dos Quadrados.: " + quadrado);
 
 //##########//
+
+/* 
+11. Partindo do princípio que um posto de combustíveis vende apenas gasolina comum e
+aditivada, faça um programa que leia o preço de cada um, bem como a quantidade de litros
+vendidos de cada tipo de gasolina em um determinado dia, e calcule/mostre o total vendido
+(com duas casas decimais).
+
+Entrada                            Saída
+Preço Gas Comum..: 3,39            Total Vendido....: 10619,40
+Litros Gas Comum.: 2345
+Preço Gas Adit...: 3,49
+Litros Gas Adit..: 765
+          
+*/
+
+    double precoGasComum = double.Parse(Console.ReadLine());
+    double litroGasComum = double.Parse(Console.ReadLine());
+    double precoGasAdiva = double.Parse(Console.ReadLine());
+    double litroGasAdiva = double.Parse(Console.ReadLine());
+    
+    double calc = (precoGasComum*litroGasComum)+(precoGasAdiva*litroGasAdiva);
+    
+    Console.WriteLine("Total Vendido: "+calc.ToString("F2"));
+
+//##########//
+
+/* 
+12. Esquematize um algoritmo/programa que leia dois valores, e em seguida troque-os de
+variáveis. Os dois métodos mais conhecidos são:
+- o da bolha (criar uma variável auxiliar)
+- método aritmético (através da soma e subtração de valores das variáveis)
+* Obs.: Não basta trocar os prints na saída, é preciso mesmo trocar os valores das variáveis
+Entrada       Saída
+X = 7         X = 11
+Y = 11        Y = 7
+         
+*/
+
+int x=int.Parse(Console.ReadLine());
+int y=int.Parse(Console.ReadLine());
+      
+int x1 = y;
+int y1 = x;
+      
+y=y1;
+x=x1;
+      
+Console.WriteLine("X= "+ x);
+Console.WriteLine("Y= "+ y);
+
+//##########//
+
+
+/*
+13. Escreva um algoritmo que leia um valor em reais e exiba quantos dólares, euros e pesos
+argentinos seria possível comprar com o montante informado. Considere que um dólar vale
+R$ 4,06, um euro vale R$ 4,56 e um peso argentino R$ 0,43. Arredonde os valores para 2
+casas decimais e 6 casas antes da vírgula.
+Entrada            Saída
+Reais.: 2000       Dólares.: 492.61
+                   Euros...: 438.60
+                Pesos...: 4651.16
+          
+*/
+
+    double reais = double.Parse(Console.ReadLine());
+    double dola = reais/4.06;
+    double euro = reais/4.56;
+    double peso = reais/0.43;
+    
+    
+    Console.WriteLine("Dólares: "+dola.ToString("F2"));
+    Console.WriteLine("Euros: "+euro.ToString("F2"));
+    Console.WriteLine("Pesos: "+peso.ToString("F2"));
+    
+//##########//
+
+/*
+14. Aristeu visitará sua família em sua cidade natal. Ele enche o tanque de combustível antes de
+sair e anota a quilometragem do odômetro. Ao chegar no destino, Aristeu enche novamente
+o tanque, guarda o cupom fiscal e anota a quilometragem do odômetro. Neste contexto, crie
+um algoritmo que a partir das quilometragens do odômetro (inicial e final), do preço da
+gasolina e do valor total abastecido, determine e mostre:
+- a quilometragem percorrida
+- a quantidade de litros abastecidos
+- o consumo (em km/litro)
+- o preço do km rodado
+* partimos do princípio que o automóvel inicia a viagem com o tanque cheio
+* formatação para 2 casas decimais, sem arredondamento
+
+Entrada                       Saída
+Km inicial.: 127543           Km percorrida.: 586
+Km final...: 128129           Litros abast..: 45.27
+Preço Gas..: 3.39             Consumo Km/l..: 12.94
+Valor Abast: 153.48           Preço Km......: 0.26
+
+*/
+
+ double kmInicial = double.Parse(Console.ReadLine());
+    double kmFinal = double.Parse(Console.ReadLine());
+    double precoGas = double.Parse(Console.ReadLine());
+    double valorAbst = double.Parse(Console.ReadLine());
+    
+    
+    
+    double kmPercorrido = kmFinal-kmInicial;
+    double litroAbast = valorAbst/precoGas;
+    double consumoKm = kmPercorrido/litroAbast;
+    double precoKm = valorAbst/kmPercorrido;
+    
+    
+    Console.WriteLine("Km percorrida: "+kmPercorrido.ToString("F2"));
+    Console.WriteLine("Litros abast: "+litroAbast.ToString("F2"));
+    Console.WriteLine("Consumo Km/l: "+consumoKm.ToString("F2"));
+    Console.WriteLine("Preço Km: "+precoKm.ToString("F2"));
+    
+    
+    //##########//
+    
+    /*
+15. Faça um algoritmo para determinar o valor de um cofre cheio de moedas. Leia a quantidade
+de cada tipo de moeda e imprima o valor total. Considere a existência de moedas de 1, 5, 10,
+25, 50 centavos e 1 real.
+Entrada                 Saída
+Moedas 0.01.: 22        Total do Cofre.: 23.87
+Moedas 0.05.: 17
+Moedas 0.10.: 33
+Moedas 0.25.: 12
+Moedas 0.50.: 15
+Moedas 1.00.: 9
+      
+
+          
+*/
+
+    Console.Write("Moedas 0.01: ");
+    double moeda001 = double.Parse(Console.ReadLine());
+    Console.Write("Moedas 0.05: ");
+    double moeda005 = double.Parse(Console.ReadLine());
+    Console.Write("Moedas 0.10: ");
+    double moeda010 = double.Parse(Console.ReadLine());
+    Console.Write("Moedas 0.25: ");
+    double moeda025 = double.Parse(Console.ReadLine());
+    Console.Write("Moedas 0.50: ");
+    double moeda050 = double.Parse(Console.ReadLine());
+    Console.Write("Moedas 1.00: ");
+    double moeda100 = double.Parse(Console.ReadLine());
+    
+    
+    double calc = (moeda001*0.01)+(moeda005*0.05)+(moeda010*0.10)+(moeda025*0.25)+(moeda050*0.50)+(moeda100*1.00);
+  
+    Console.WriteLine("Total do Cofre: "+calc.ToString("F2"));
+    
+    
+    
+    //##########//
+    
+    
