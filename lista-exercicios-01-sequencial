@@ -408,4 +408,24 @@ Moedas 1.00.: 9
     
     //##########//
     
+    Parte 2 Uso de Funções Pré-Definidas
+
+16. Elabore um algoritmo/programa que leia dois valores inteiros e que calcule:
+a) a potência do primeiro número elevado ao segundo número
+b) a raiz quadrada do primeiro número
+
+*/
+    string [] valores = Console.ReadLine().Split(' ');
+    double a = double.Parse(valores[0]);
+    double b = double.Parse(valores[1]);
+    
+    double potencia = Math.Pow(a,b);
+    double raiz=Math.Sqrt(a);
+    
+    Console.WriteLine("Potência: "+potencia);
+    Console.WriteLine("Raiz Quad : "+raiz.ToString("F6"));
+    
+    
+    //##########//
+    
     
